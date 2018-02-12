@@ -160,7 +160,7 @@ private:
                             if (!t->validate()) {
                                 isValid = false;
                                 cerr << *t << " not valid" << endl;
-                                this->erase(Reference<T>(*t));
+                                //this->erase(Reference<T>(*t));
                             }
                         }
                         return isValid;
