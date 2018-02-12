@@ -290,12 +290,16 @@ BOOST_AUTO_TEST_CASE(test_Analysis) {
 			cout << "!!!!!!!!" << *ls << endl;
 	}
 	BOOST_CHECK(!analysis.validate());
+	cout <<"Checked valdiation of analysis"<<endl;
 	BOOST_CHECK(!model.validate());
+	cout <<"Checked valdiation of model"<<endl;
 
 	set<shared_ptr<Loading>> loadings = model.getLoadingsByLoadSet(loadSet1);
+	cout <<"Loading"<<endl;
 	BOOST_CHECK_EQUAL((size_t )2, loadings.size());
 	for (shared_ptr<Loading> loading : loadings) {
 		BOOST_CHECK(loading->getId() == force1.getId() || loading->getId() == force2.getId());
+		cout <<"Checked loading"<<endl;
 	}
 }
 
